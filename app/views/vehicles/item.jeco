@@ -1,0 +1,6 @@
+<div id="<% @id %>" class="item">
+  <span class="how-many">4</span>
+  <span class="image-placehoder"></span>
+  <span><%= @year %> <%= @make %> <%= @model %> <%= @trim %></span>
+  <div class="dealership"><%= @dealership %></div>
+</div>
