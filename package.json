@@ -14,7 +14,8 @@
     "spine.mobile": "latest",
     "gfx": "~0.0.4",
     "express":"2.5.10",
-    "mongoose": "2.5.6",
+    "mongoose": "3.1.0",
+    "mongoose-rest": "https://github.com/dartavion/mongoose-rest/tarball/master",
     "coffee-script": "latest",
     "strata": "~0.15.1",
     "spinegoose": "*"
