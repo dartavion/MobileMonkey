@@ -2,8 +2,8 @@
 <h2><%= @make %><h2>
 <p><%= @model %></p>
 <p><%= @trim %></p>
+<p><%= @color %></p>
+<p><%= @dealershipName %></p> 
+<p><%= @dealershipAddress %></p> 
 
-<p><%= @dealership['name'] %></p> 
-<p><%= @dealership.name %></p> 
-<% for dealership in @dealership: %>
-<% end %> 
+

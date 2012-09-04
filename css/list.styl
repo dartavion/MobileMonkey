@@ -11,15 +11,24 @@ rounded($radius)
     display:inline-table
     border-bottom:1px solid #ccc
     padding:30px
-    font-weight:bold
-    > span
+    font-weight:normal
+    color: #656565
+    > ul 
+      list-style:none;
+      > li
+        padding:0;
+        margin:0;
+        vertical-align:middle;
+      > li.bold-text
+        font-weight:bold
+    > .table
       vertical-align:middle
       display:inline-table
       margin-right:20px
     > .image-placehoder
-      width:70px
-      height:40px
-      border:1px solid #ccc
+      width:90px
+      height:70px
+      border:1px solid #4c6f97
       background-color: #f4f4f4
     > .how-many
       rounded (10px)
@@ -27,4 +36,4 @@ rounded($radius)
       padding 10px
       color white
     > .dealership
-      color:#ccc
+      color:#656565

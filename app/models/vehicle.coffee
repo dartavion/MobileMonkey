@@ -12,7 +12,18 @@ class Vehicle extends Spine.Model
   'color',
   'price',
   'date', 
-  'dealership',
+  'dealershipName',
+  'dealershipAddress',
+  'dealershipCity',
+  'dealershipState',
+  'dealershipZip',
+  'dealershipPhone',
+  'dealershipDistance',
+  'messageOneType',
+  'messageOneDealership',
+  'messageOneMessage',
+  'messageOnePrice',
+  'messageOneTime',
   'messages'
 
 
