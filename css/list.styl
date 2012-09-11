@@ -8,38 +8,35 @@ buttonGradient($from, $to)
   // background: -moz-linear-gradient(top,  $from, $to);
   // filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
 
-a.btn {
-  position:relative;
-  display:block;
+a.btn 
+  position: relative;
+  display: block;
   width: 20%
   height:100%px;
-  text-align:center;
-  float:left;
-}
+  text-align: center;
+  float: left;
 
-a span {
-  display:block;
-  position:relative;
-}
 
-a span.btn-label {
-  position:absolute;
-  bottom:5px;
-  text-align:center;
-  width:100%;
-}
+a span 
+  display: block;
+  position: relative;
 
-a span.sprite {
-  top:10px;
-}
+a span.btn-label 
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
+
+a span.sprite 
+  top: 10px;
 
 a.redBtn
   buttonGradient(#ffa0a0, #b80804);
   border-color: #cd1916;
   border-bottom-color: #800300;
-  border:none;
-  text-shadow:0 1px 2px #800300;
-  color:white;
+  border: none;
+  text-shadow: 0 1px 2px #800300;
+  color: white;
   background-color: #ffa0a0;
   height:80px;
   margin:0;
@@ -50,7 +47,7 @@ a.blueBtn
   border-color: #408cd9;
   border-bottom-color: #800300;
   border:none;
-  text-shadow:0 1px 2px #800300;
+  text-shadow: 0 1px 2px #800300;
   color:white;
   background-color: #408cd9;
   height:80px;
@@ -96,71 +93,71 @@ a.grayBtn
 
 .vehicle.messages
   > article div.item
-    width 100%
-    clear both
-    display inline-table
-    border-bottom 1px solid #ccc
-    padding 0
-    font-weight normal
-    color  #656565
+    width: 100%;
+    clear: both;
+    display: inline-table;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    font-weight: normal;
+    color: #656565;
     > div.vehicle-container
-      border-bottom:1px dashed #999999
-      padding: 5px 0 5px 0
+      border-bottom: 1px dashed #999999;
+      padding: 5px 0 5px 0;
       > .table
-        vertical-align middle
-        display inline-table
+        vertical-align: middle;
+        display: inline-table;
       > span.how-many
-        rounded (30px)
-        background-color blue
-        color white
-        margin 0 5px 0 5px
-        padding 3px
+        rounded (30px);
+        background-color: blue;
+        color: white;
+        margin: 0 5px 0 5px;
+        padding: 3px;
       > span.image-placehoder
-        width 90px
-        height 70px
-        border 1px solid #4c6f97
+        width: 90px;
+        height: 70px;
+        border: 1px solid #4c6f97;
 
       > ul 
-        list-style none
-        padding 0
-        margin 0 5px 0 5px
+        list-style: none;
+        padding: 0;
+        margin: 0 5px 0 5px;
         > li
-          padding 0
-          margin 0
-          vertical-align middle
+          padding: 0;
+          margin: 0;
+          vertical-align: middle;
         > li.bold-text
-          font-weight bold
+          font-weight: bold;
     > ul.message-detail
-      padding 5px 5px 5px 0
-      margin 0
-      list-style none
+      padding: 5px 5px 5px 0;
+      margin: 0;
+      list-style: none;
       > li span.bold-text
-        font-weight:bold
-        margin-left:10px
+        font-weight: bold;
+        margin-left: 10px;
       > li.table
-        vertical-align middle
-        display inline-table
+        vertical-align: middle;
+        display: inline-table;
 
 .vehicle-details
   > div.dark-blue
-    background-color:#003366;
+    background-color: #003366;
   > div.vehicle-detail
-    height:60px
+    height: 60px;
     > ul.vehicle-description-white
       list-style: none;
-      padding:0;
+      padding: 0;
       margin:10px 0 0 10px;
       > li.sub-text
         color:#333;
         font-weight:normal;
       > li.sub-text-white
-        color:#fff;
-        font-weight:normal;
+        color: #fff;
+        font-weight: normal;
 
   > div.messages
     > ul
-      padding: 0
-      margin:0
+      padding: 0;
+      margin: 0;
       > li.message-blue
         background-color:#dcecfb;
 
