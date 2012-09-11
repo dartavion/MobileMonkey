@@ -38,6 +38,14 @@ class VehicleMessages extends Panel
     @navigate('/vehicles', item.id, trans: 'right')
 
 class VehicleMessageDetails extends Panel
+  
+  events:
+    'tap .declineButton': 'declineButtonClick'
+    'tap .messageButton': 'messageButtonClick'
+    'tap .counterButton': 'counterButtonClick'
+    'tap .acceptButton': 'acceptButtonClick'
+    'tap .callButton': 'callButtonClick'
+
   constructor: ->
     super
     
@@ -60,15 +68,27 @@ class VehicleMessageDetails extends Panel
   back: ->
     @navigate('/vehicles', trans: 'left')
 
-  hello: ->
-    console.log('hello')
+  declineButtonClick: ->
+    console.log("touch/clicked the decline button")
 
-  addFooterButton: (text, callback) ->
-    callback = @[callback] if typeof callback is 'string'
-    button = $('<button />').text(text)
-    button.tap(@proxy(callback))
-    $('footer').append(button)
-    button 
+  messageButtonClick: ->
+    console.log("touch/clicked the message button")
+
+  counterButtonClick: ->
+    console.log("touch/clicked the counter button")
+
+  acceptButtonClick: ->
+    console.log("touch/clicked the accept button")
+
+  callButtonClick: ->
+    console.log("touch/clicked the call button")
+
+  # addFooterButton: (text, callback) ->
+  #   callback = @[callback] if typeof callback is 'string'
+  #   button = $('<button />').text(text)
+  #   button.tap(@proxy(callback))
+  #   $('footer').append(button)
+  #   button 
 
    
 

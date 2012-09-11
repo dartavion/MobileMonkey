@@ -43,28 +43,26 @@
 
 
     <div style="position:fixed;bottom:0;width:100%;">
+        <a class="btn greenBtn acceptButton">
+            <span class="message_Accept_Button sprite"></span>
+            <span class="btn-label">Accept<span>
+        </a>
+        <a class="btn orangeBtn counterButton">
+            <span class="message_Counter_Button sprite"></span>
+            <span class="btn-label">Counter</span>
+        </a>
         <a class="btn redBtn declineButton">
             <span class="message_Decline_Button sprite"></span>
             <span class="btn-label">Decline</span>
         </a>
-        <a class="btn blueBtn">
+        <a class="btn blueBtn messageButton">
             <span class="message_Message_Button sprite"></span>
             <span class="btn-label">Message</span>
         </a>
-        <a class="btn orangeBtn">
-            <span class="message_Counter_Button sprite"></span>
-            <span class="btn-label">Counter</span>
-        </a>
-        <a class="btn greenBtn">
-            <span class="message_Accept_Button sprite"></span>
-            <span class="btn-label">Accept<span>
-        </a>
-        <a class="btn grayBtn">
+        <a class="btn grayBtn callButton">
             <span class="btn-label">Call</span>
         </a>
     </div>
-
-    
 </div>
 
 
