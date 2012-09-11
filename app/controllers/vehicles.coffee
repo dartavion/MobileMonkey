@@ -70,18 +70,21 @@ class VehicleMessageDetails extends Panel
 
   declineButtonClick: ->
     console.log("touch/clicked the decline button")
+    @navigate('/message', trans: 'right')
 
   messageButtonClick: ->
     console.log("touch/clicked the message button")
     item = {id: 123}
     # @navigate('/messages', item.id, trans: 'right')
-    @navigate('/messages', trans: 'right')
+    @navigate('/message', trans: 'right')
 
   counterButtonClick: ->
     console.log("touch/clicked the counter button")
+    @navigate('/counter', trans: 'right')
 
   acceptButtonClick: ->
     console.log("touch/clicked the accept button")
+    @navigate('/message', trans: 'right')
 
   callButtonClick: ->
     console.log("touch/clicked the call button")
@@ -98,10 +101,19 @@ class NewVehicleMessage extends Panel
   constructor: ->
     super
     @render()
-
+    @addButton('Back', @back)
   
   render: =>
     @html require('views/vehicles/message')
+
+class CounterMessage extends Panel
+
+  constructor: ->
+    super
+    @render()
+  
+  render: =>
+    @html require('views/vehicles/counter')
 
 
 class Vehicles extends Spine.Controller
@@ -111,11 +123,13 @@ class Vehicles extends Spine.Controller
     @messages = new VehicleMessages
     @messageDetails = new VehicleMessageDetails
     @newVehicleMessage = new NewVehicleMessage
+    @newCounterMessage = new CounterMessage
 
     @routes 
       '/vehicles': (params) -> @messages.active(params)
       '/vehicles/:id': (params) -> @messageDetails.active(params)
-      '/messages': -> @newVehicleMessage.active()
+      '/message': -> @newVehicleMessage.active()
+      '/counter': -> @newCounterMessage.active()
 
     Vehicle.fetch()
     

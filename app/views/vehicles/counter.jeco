@@ -1,6 +1,11 @@
 
 <form>
+    <legend>Current Offer $##,###</legend>
     <div class="fieldset">
+        <div class="field-row">
+            <span class="form-input-hint">$</span>
+            <input type="text" class="form-offer-text" />
+        </div>
         <div class="field-row">
             <textarea></textarea>
         </div>
