@@ -1,9 +1,75 @@
-<h1><%= @year %></h1>
-<h2><%= @make %><h2>
-<p><%= @model %></p>
-<p><%= @trim %></p>
-<p><%= @color %></p>
-<p><%= @dealershipName %></p> 
-<p><%= @dealershipAddress %></p> 
+
+<div class="vehicle-details">
+    <div class="dark-blue vehicle-detail">
+        <img style="clear:both" class="vehicle-image-white" src="images/vehicle.png"/>
+        <ul class="vehicle-description-white">
+            <li class="sub-text-white" style="font-weight: bold"><%= @year %> <%= @make %> <%= @model %></li>
+            <li class="sub-text-white"><%= @vin %></li>
+        </ul>
+    </div>
+
+    <div class="messages">
+
+        <ul>
+            <li class="message-blue top-message">
+                
+                <span style="font-weight:bold">Auto Sales USA</span>
+                <span style="position:absolute; right:60px;"> 06/20 12:30 PM </span>
+                <i style="position:absolute; right:20px;" class="icon-message">img</i>
+                <span style="display:block">Mike Smith</span>
+            </li>
+            <li class="message-light-blue bottom-message message-blue-border">
+                Wanna buy?
+            </li>
+            <li style="position:relative">
+                <img class="message-blue-angle" src="images/blue-message-bubble-quote.png"/>
+            </li>
+
+            <li class="message-gray top-message">
+                
+                <span style="font-weight:bold">Auto Sales USA</span>
+                <span style="position:absolute; right:60px;"> 06/20 12:30 PM </span>
+                <i style="position:absolute; right:20px;" class="icon-message">img</i>
+                <span style="display:block">Mike Smith</span>
+            </li>
+            <li class="message-light-gray bottom-message message-gray-border">
+                Wanna buy?
+            </li>
+            <li style="position:relative">
+                <img class="message-gray-angle" src="images/gray-message-bubble-quote.png"/>
+            </li>
+        </ul>
+    </div>
+
+
+    <div style="position:fixed;bottom:0;width:100%;">
+        <a class="btn redBtn declineButton">
+            <span class="message_Decline_Button sprite"></span>
+            <span class="btn-label">Decline</span>
+        </a>
+        <a class="btn blueBtn">
+            <span class="message_Message_Button sprite"></span>
+            <span class="btn-label">Message</span>
+        </a>
+        <a class="btn orangeBtn">
+            <span class="message_Counter_Button sprite"></span>
+            <span class="btn-label">Counter</span>
+        </a>
+        <a class="btn greenBtn">
+            <span class="message_Accept_Button sprite"></span>
+            <span class="btn-label">Accept<span>
+        </a>
+        <a class="btn grayBtn">
+            <span class="btn-label">Call</span>
+        </a>
+    </div>
+
+    
+</div>
+
+
+
+
+
 
 

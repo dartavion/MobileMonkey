@@ -1,8 +1,2 @@
 <div class="item">
-    <span>boo</span>
-  <span class="type"><%= @year %></span>
-  <span class="minutes">for <%= @make %> </span>
-  <span class="minutes">for <%= @model %> </span>
-  <span class="minutes">for <%= @trim %> </span>
-  <span class="date">on <%= @date.toDateString() %></span>
 </div>

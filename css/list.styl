@@ -3,37 +3,199 @@ rounded($radius)
   -moz-border-radius $radius
   border-radius $radius
 
+buttonGradient($from, $to)
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  // background: -moz-linear-gradient(top,  $from, $to);
+  // filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+
+a.btn {
+  position:relative;
+  display:block;
+  width: 20%
+  height:100%px;
+  text-align:center;
+  float:left;
+}
+
+a span {
+  display:block;
+  position:relative;
+}
+
+a span.btn-label {
+  position:absolute;
+  bottom:5px;
+  text-align:center;
+  width:100%;
+}
+
+a span.sprite {
+  top:10px;
+}
+
+a.redBtn
+  buttonGradient(#ffa0a0, #b80804);
+  border-color: #cd1916;
+  border-bottom-color: #800300;
+  border:none;
+  text-shadow:0 1px 2px #800300;
+  color:white;
+  background-color: #ffa0a0;
+  height:80px;
+  margin:0;
+  padding;10px;
+
+a.blueBtn
+  buttonGradient(#66A3E0, #003366);
+  border-color: #408cd9;
+  border-bottom-color: #800300;
+  border:none;
+  text-shadow:0 1px 2px #800300;
+  color:white;
+  background-color: #408cd9;
+  height:80px;
+  margin:0;
+  padding;10px;
+
+a.orangeBtn
+  buttonGradient(#ff9900,#ff9900);
+  border-color: #408cd9;
+  border-bottom-color: #800300;
+  text-shadow:0 1px 2px #800300;
+  border:none;
+  color:white;
+  background-color: #408cd9;
+  height:80px;
+  margin:0;
+  padding;10px;
+
+a.greenBtn
+  buttonGradient(#4ea855,#4ea855);
+  border-color: #408cd9;
+  border-bottom-color: #800300;
+  text-shadow:0 1px 2px #800300;
+  border:none;
+  color:white;
+  background-color: #408cd9;
+  height:80px;
+  margin:0;
+  padding;10px;
+
+a.grayBtn
+  bottom:0;
+  buttonGradient(#efefef, #efefef)
+  border-color: #408cd9;
+  border-bottom-color: #800300;
+  text-shadow:0 1px 2px #999;
+  border:none;
+  color:#000;
+  background-color: #408cd9;
+  height:80px;
+  margin:0;
+  padding;10px;
 
 .vehicle.messages
   > article div.item
-    width:100%
-    clear:both
-    display:inline-table
-    border-bottom:1px solid #ccc
-    padding:30px
-    font-weight:normal
-    color: #656565
-    > ul 
-      list-style:none;
-      > li
-        padding:0;
-        margin:0;
-        vertical-align:middle;
-      > li.bold-text
+    width 100%
+    clear both
+    display inline-table
+    border-bottom 1px solid #ccc
+    padding 0
+    font-weight normal
+    color  #656565
+    > div.vehicle-container
+      border-bottom:1px dashed #999999
+      padding: 5px 0 5px 0
+      > .table
+        vertical-align middle
+        display inline-table
+      > span.how-many
+        rounded (30px)
+        background-color blue
+        color white
+        margin 0 5px 0 5px
+        padding 3px
+      > span.image-placehoder
+        width 90px
+        height 70px
+        border 1px solid #4c6f97
+
+      > ul 
+        list-style none
+        padding 0
+        margin 0 5px 0 5px
+        > li
+          padding 0
+          margin 0
+          vertical-align middle
+        > li.bold-text
+          font-weight bold
+    > ul.message-detail
+      padding 5px 5px 5px 0
+      margin 0
+      list-style none
+      > li span.bold-text
         font-weight:bold
-    > .table
-      vertical-align:middle
-      display:inline-table
-      margin-right:20px
-    > .image-placehoder
-      width:90px
-      height:70px
-      border:1px solid #4c6f97
-      background-color: #f4f4f4
-    > .how-many
-      rounded (10px)
-      background-color blue
-      padding 10px
-      color white
-    > .dealership
-      color:#656565
+        margin-left:10px
+      > li.table
+        vertical-align middle
+        display inline-table
+
+.vehicle-details
+  > div.dark-blue
+    background-color:#003366;
+  > div.vehicle-detail
+    height:60px
+    > ul.vehicle-description-white
+      list-style: none;
+      padding:0;
+      margin:10px 0 0 10px;
+      > li.sub-text
+        color:#333;
+        font-weight:normal;
+      > li.sub-text-white
+        color:#fff;
+        font-weight:normal;
+
+  > div.messages
+    > ul
+      padding: 0
+      margin:0
+      > li.message-blue
+        background-color:#dcecfb;
+
+      > li.message-light-blue
+        background-color:#eef5fd;
+
+      > li.message-blue-border
+        border-bottom:1px solid #c9cdd0;
+
+      > li 
+        img.message-blue-angle
+          position: absolute;
+          right:10px;
+          top:-1px;
+
+      > li.message-gray-border
+        border-bottom:1px solid #cdcdcd;
+
+      > li
+        > img.message-gray-angle
+          position: absolute;
+          left:10px;
+          top:-1px;
+
+      > li.message-gray
+        background-color:#f5f5f5;
+
+      > li.message-light-gray
+        background-color:#fafafa;
+
+      > li.top-message
+        padding:5px 5px 5px 10px;
+
+      > li.bottom-message
+        padding:5px 5px 5px 10px;
+
+
+

@@ -1,15 +1,21 @@
 <div id="<% @id %>" class="item">
-  <span class="how-many table">4</span>
-  <span class="image-placehoder table"></span>
-  <ul class="car-detail table" style="width:130px">
-    <li class="bold-text"><%= @year %> <%= @make %> <%= @model %></li>
-    <li><%= @dealershipName %></li>
-    <li><%= @dealershipAddress %> <%= @dealershipCity %> <%= @dealershipState %> <%= @dealershipZip %></li>
-    <li>Distance: <%= @dealershipDistance %></li>
-  </ul>
-  <ul class="table">
-    <li><%= @messageOneTime %></li>
-    <li class="bold-text">$<%= @messageOnePrice %></li>
-    <li><%= @messageOneType %></li>
+  <div class="vehicle-container">
+    <span class="table how-many"></span>
+    <span class="image-placehoder table"></span>
+    <ul class="car-detail table">
+      <li class="bold-text"><%= @year %> <%= @make %> <%= @model %></li>
+      <li> <%= @vin %></li>
+      <li><%= @dealershipName %></li>
+      <li><%= @dealershipCity %>, <%= @dealershipState %> - <%= @dealershipDistance %> miles away</li>
+    </ul>
+  </div>
+  <ul class="message-detail">
+    <li class="table">
+      <span class="<%= @messageOneTypeImage %>" style="vertical-align:middle;margin-right:10px"></span> 
+      <span class="vertical-align:middle"><%= @messageTypeText %>:</span>
+      <span class="bold-text">$<%= @messageOnePrice %></span>
+    </li>
+    
+    <li class="" style="float:right">12:27</li>
   </ul>
 </div>

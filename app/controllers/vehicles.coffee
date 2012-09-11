@@ -47,7 +47,7 @@ class VehicleMessageDetails extends Panel
     
     @addButton('Back', @back)
 
-    @addFooterButton('Message', @hello)
+    # @addFooterButton('Message', @hello)
   
   render: =>
     return unless @vehicle

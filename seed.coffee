@@ -37,7 +37,83 @@ db.once 'open', ->
 
   Message = {}
 
-  vehicleOne = new Vehicle
+  acceptedOffer = new Vehicle
+    img: '/assets/place-holder.gif',
+    year: '2010',
+    make: 'BMW',
+    model: 'X6',
+    vin: '1VBP8CYKJ4321111',
+    color: 'blue',
+    odometer: '21,202',
+    price: '67,000',
+    dealershipName: 'Munge',
+    dealershipAddress: 'Wiley Coyote (super genius)',
+    dealershipCity: 'Atlanta',
+    dealershipState: 'GA',
+    dealershipZip: '30042',
+    dealershipPhone: '555-555-5555',
+    dealershipDistance: '20',
+    messageOneType: 'accepted',
+    messageOneDealership: 'n Dealer',
+    messageOneMessage: 'A great new message',
+    messageOnePrice: '10,000',
+    messageOneTime: new Date()
+
+  multipleMessages = new Vehicle
+    img: '/assets/place-holder.gif',
+    year: '2010',
+    make: 'Chevy',
+    model: 'Truck',
+    vin: '4VBP8CYKJ4322222',
+    color: 'blue',
+    odometer: '222,922',
+    price: '17,000',
+    distance: '30',
+    dealershipName: 'R3e Dealer',
+    dealershipAddress: '6090 Smuggle Drive',
+    dealershipCity: 'Atlanta',
+    dealershipState: 'Georgia',
+    dealershipZip: '30042',
+    dealershipPhone: '555-555-5555',
+    messageOneType: 'offer',
+    messageOneDealership: 'Red Dealer',
+    messageOneMessage: 'A smell that portends an aroma',
+    messageOnePrice: '45,000',
+    messageOneTime: new Date(),
+    messageTwoType:'message',
+    messageTwoDealership: 'Green Dealer',
+    messageTwoMessage: 'A sight that portends a vision',
+    messageTwoPrice: '145,000',
+    messageTwotime: new Date(),
+    messageThreetype: 'accepted',
+    messageThreeDealership: 'Yellow Dealer',
+    messageThreeMessage: 'A flavor that portends a taste',
+    messageThreePrice: '12,000',
+    messageThreeTime: new Date()
+
+  counter = new Vehicle
+    img: '/assets/place-holder.gif',
+    year: '2010',
+    make: 'Willy Wonka',
+    model: 'Bubble Maker',
+    vin: '1VBP8CYKJ4323112',
+    color: 'blue',
+    odometer: '65,444',
+    price: '60,000',
+    dealershipName: 'Red Dealer',
+    dealershipAddress: 'E Drive',
+    dealershipCity: 'Atlanta',
+    dealershipState: 'GA',
+    dealershipZip: '30042',
+    dealershipPhone: '555-555-5555',
+    dealershipDistance: '20',
+    messageOneType: 'counter',
+    messageOneDealership: 'F Dealer',
+    messageOneMessage: 'A great new message',
+    messageOnePrice: '9,000',
+    messageOneTime: new Date()
+
+  declined = new Vehicle
     img: '/assets/place-holder.gif',
     year: '2010',
     make: 'BMW',
@@ -53,48 +129,42 @@ db.once 'open', ->
     dealershipZip: '30042',
     dealershipPhone: '555-555-5555',
     dealershipDistance: '20',
-    messageOneType: 'question',
+    messageOneType: 'declined',
     messageOneDealership: 'Blue Dealer',
     messageOneMessage: 'A great new message',
     messageOnePrice: '10,000',
-    messageOneTime: Date.now()
+    messageOneTime: new Date()
 
-  vehicleTwo = new Vehicle
+  message = new Vehicle
     img: '/assets/place-holder.gif',
     year: '2010',
     make: 'BMW',
-    model: '238',
-    vin: '4VBP8CYKJ4324983',
+    model: 'X6',
+    vin: '1VBP8CYKJ4324983',
     color: 'blue',
-    odometer: '10,902',
-    price: '27,000',
-    distance: '30',
-    dealershipName: 'Blue Dealer',
-    dealershipAddress: '6090 Smuggle Drive',
+    odometer: '21,202',
+    price: '67,000',
+    dealershipName: 'Purple Dealer',
+    dealershipAddress: '124 Fun Drive',
     dealershipCity: 'Atlanta',
-    dealershipState: 'Georgia',
+    dealershipState: 'GA',
     dealershipZip: '30042',
     dealershipPhone: '555-555-5555',
+    dealershipDistance: '20',
     messageOneType: 'message',
-    messageOneDealership: 'Red Dealer',
-    messageOneMessage: 'A smell that portends an aroma',
-    messageOnePrice: '45,000',
-    messageOneTime: Date.now(),
-    messageTwoType:'message',
-    messageTwoDealership: 'Green Dealer',
-    messageTwoMessage: 'A sight that portends a vision',
-    messageTwoPrice: '145,000',
-    messageTwotime: Date.now(),
-    messageThreetype: 'offer',
-    messageThreeDealership: 'Yellow Dealer',
-    messageThreeMessage: 'A flavor that portends a taste',
-    messageThreePrice: '12,000',
-    messageThreeTime: Date.now()
+    messageOneDealership: 'Blue Dealer',
+    messageOneMessage: 'A great new message',
+    messageOnePrice: '10,000',
+    messageOneTime: new Date()
 
 
   
-  vehicleOne.save (err) ->
-  vehicleTwo.save (err) ->  
+  acceptedOffer.save (err) ->
+  multipleMessages.save (err) ->  
+  counter.save (err) ->
+  declined.save (err) ->
+  message.save (err) ->
+
   #   if (err) 
   #   res.end('not saved')
 
