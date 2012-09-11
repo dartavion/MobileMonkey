@@ -30,10 +30,13 @@ class Vehicle extends Spine.Model
 
   load: ->
     super
-    @date = new Date(@date)
-    @messageOneTime = convertDate(@messageOneTime)
+    @date = new Date(@messageOneTime)
+    # @messageOneTime = convertDate(@messageOneTime)
     @messageOneTypeImage = setMessageTypeImage(@messageOneType)
     @messageTypeText = setMessageTypeText(@messageOneType)
+    @thePrettyDate = prettyDate(@messageOneTime)
+    
+    console.log(prettyDate(@messageOneTime))
 
   setMessageTypeText = (type) ->
     switch type
@@ -99,6 +102,28 @@ class Vehicle extends Spine.Model
     delete atts.id;
     return atts;
   
+  prettyDate = (time) ->
+    newTime = new Date time 
+    # if you need iso time use the next two lines and comment out the third
+    # date = new Date((tt || "").replace(/-/g,"/").replace(/[TZ]/g," "))
+    # diff = (((new Date()).getTime() - date.getTime()) / 1000)
+    diff = (((new Date()).getTime() - newTime.getTime()) / 1000)
+    day_diff = Math.floor(diff / 86400)
+
+    if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
+      return
+        
+    return day_diff == 0 && (
+        diff < 60 && "just now" ||
+        diff < 120 && "1 minute ago" ||
+        diff < 3600 && Math.floor( diff / 60 ) + " minutes ago" ||
+        diff < 7200 && "1 hour ago" ||
+        diff < 86400 && Math.floor( diff / 3600 ) + " hours ago") ||
+      day_diff == 1 && "Yesterday" ||
+      day_diff < 7 && day_diff + " days ago" ||
+      day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago"
+
+
   # @extend @Local
   
   

@@ -16,6 +16,6 @@
       <span class="bold-text">$<%= @messageOnePrice %></span>
     </li>
     
-    <li class="" style="float:right">12:27</li>
+    <li class="" style="float:right"><%= @thePrettyDate %></li>
   </ul>
 </div>

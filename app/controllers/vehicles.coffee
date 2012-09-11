@@ -73,6 +73,9 @@ class VehicleMessageDetails extends Panel
 
   messageButtonClick: ->
     console.log("touch/clicked the message button")
+    item = {id: 123}
+    # @navigate('/messages', item.id, trans: 'right')
+    @navigate('/messages', trans: 'right')
 
   counterButtonClick: ->
     console.log("touch/clicked the counter button")
@@ -90,7 +93,16 @@ class VehicleMessageDetails extends Panel
   #   $('footer').append(button)
   #   button 
 
-   
+class NewVehicleMessage extends Panel
+
+  constructor: ->
+    super
+    @render()
+
+  
+  render: =>
+    @html require('views/vehicles/message')
+
 
 class Vehicles extends Spine.Controller
   constructor: ->
@@ -98,10 +110,12 @@ class Vehicles extends Spine.Controller
 
     @messages = new VehicleMessages
     @messageDetails = new VehicleMessageDetails
+    @newVehicleMessage = new NewVehicleMessage
 
     @routes 
       '/vehicles': (params) -> @messages.active(params)
       '/vehicles/:id': (params) -> @messageDetails.active(params)
+      '/messages': -> @newVehicleMessage.active()
 
     Vehicle.fetch()
     

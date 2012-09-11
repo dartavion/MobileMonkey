@@ -1,8 +1,8 @@
 
 <div class="vehicle-details">
-    <div class="dark-blue vehicle-detail">
-        <img style="clear:both" class="vehicle-image-white" src="images/vehicle.png"/>
-        <ul class="vehicle-description-white">
+    <div class="dark-blue vehicle-detail" >
+        <img style="display:inline-table;margin:5px" class="vehicle-image-white" src="images/vehicle.png"/>
+        <ul class="vehicle-description-white" style="display:inline-table;vertical-align:top">
             <li class="sub-text-white" style="font-weight: bold"><%= @year %> <%= @make %> <%= @model %></li>
             <li class="sub-text-white"><%= @vin %></li>
         </ul>
