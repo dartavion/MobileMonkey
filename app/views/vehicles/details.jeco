@@ -29,7 +29,7 @@
                 
                 <span style="font-weight:bold">Auto Sales USA</span>
                 <span style="position:absolute; right:60px;"> 06/20 12:30 PM </span>
-                <i style="position:absolute; right:20px;" class="icon-message">img</i>
+                <i style="position:absolute; right:20px;" class="icon-message"><span class="message_Offer_M sprite"></span></i>
                 <span style="display:block">Mike Smith</span>
             </li>
             <li class="message-light-gray bottom-message message-gray-border">

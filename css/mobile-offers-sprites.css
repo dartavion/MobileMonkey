@@ -10,7 +10,7 @@
 
 */
 
-.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(images/mobile-offers-sprites.png);}
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(mobile-offers-sprites.png);}
 
 .chevron-copy {width:9px; height:13px; background-position: -80px -18px}
 .chevron {width:9px; height:13px; background-position: -80px -18px}
